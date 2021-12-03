@@ -156,7 +156,8 @@ void display(char* expr) {
 int main(int argc, char** argv) {
     if (argc < 2) {
         char exprIn[100];
-        scanf("%s", exprIn);
+        if (scanf("%s", exprIn) < 1) 
+			return puts("Input Error");
         display(exprIn);
     } else for (int i = 1; i < argc; i++)
         display(argv[i]);

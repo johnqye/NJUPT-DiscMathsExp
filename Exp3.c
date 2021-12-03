@@ -141,10 +141,10 @@ void printCov(const covStore* this) {
             }
     putchar('\n');
     uint64_t gridRes = isGrid(this);
-    if (gridRes == ~0) {
+    if (gridRes == ~0ull) {
         puts("The division relation is a grid.");
         uint32_t cmplRes = isComplimentary(this);
-        if (cmplRes == ~0)
+        if (cmplRes == ~0u)
             puts("The relation is complimentary");
         else printf("The set is not complimentary:\n"
             "Element %u has no compliment.\n", cmplRes);

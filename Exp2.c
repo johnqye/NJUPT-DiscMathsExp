@@ -138,7 +138,8 @@ void printSet(const RelationSet *this) {
 // 下标为arr[0] arr[1]的关系成立，[0][2]成立，但[1][2]不成立，可由此推出无传递性
 // 如果有传递性，所有位置是-1。
 int32_t transectiveClosure(const RelationSet *this, RelationSet *dest) {
-    dest && (dest = copySet(this, dest)); // 建立新矩阵dest := this
+    if (!dest) 
+		dest = copySet(this, dest); // 建立新矩阵dest := this
     if (!dest) return INT32_MAX;
     int64_t ret = -1; int8_t* arr = (int8_t*)&ret;
     for (uint8_t i = 0; i < this->mySize; i++) {
