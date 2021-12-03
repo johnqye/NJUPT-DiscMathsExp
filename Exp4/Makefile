@@ -2,7 +2,7 @@ CFLAGS = -O2 -Wall -Werror
 VISDIR = vis
 SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
-BIN = Exp4
+BIN = Exp4.elf
 # 默认参数（图）
 ARGS = abcdefgh aabbcddeefg bdceefgghgh 128
 

@@ -1,4 +1,9 @@
 报告
 .vscode
 Exp4/.vscode
+*.elf
+*.o*
+Exp4/*.elf
+Exp4/*.o
+Exp4/vis
 build
