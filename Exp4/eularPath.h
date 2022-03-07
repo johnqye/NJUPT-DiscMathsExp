@@ -4,7 +4,7 @@
 #else
 #include <stdbool.h>
 #include <stdint.h>
-// 用于实现节点名称和对应下标的O(n)转换
+// 用于实现节点名称和对应下标的O(1)转换
 typedef struct AscMapper {
     int8_t ascToLbl[128];
     char lblToAsc[128];
